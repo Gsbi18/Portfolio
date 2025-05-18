@@ -1,0 +1,144 @@
+/* Alap stílusok és színek */
+:root {
+    --bg-color: #11120D;
+    --secondary-bg: #565449;
+    --accent-color: #D8CFBC;
+    --text-color: #FFFBF4;
+  }
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  body {
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-y: scroll;
+  }
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    padding: 60px 15px;
+  }
+  h1, h2, h3, h4 {
+    color: var(--accent-color);
+  }
+  p, li {
+    color: var(--text-color);
+  }
+  /* Bemutatkozó szekció */
+  #intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+  }
+  #intro .display-4 {
+    color: var(--text-color);
+  }
+  /* Részletes CV szekció */
+  #cv {
+    background-color: var(--secondary-bg);
+  }
+  #cv h2 {
+    margin-bottom: 20px;
+  }
+  /* Ismeretek szekció */
+  #skills {
+    background-color: var(--bg-color);
+  }
+  /* Skill kártyák */
+  .skill-card {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  /* Certifikációk szekció */
+  #certifications {
+    background-color: var(--secondary-bg);
+  }
+  .certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .certification-tile {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 1.0s ease-in;
+  }
+  .certification-tile img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .certification-tile:hover  {
+    transform: scale(2.05);
+    z-index: 100;
+  
+  }
+  .certification-tile:hover .certification-title {
+    display: none;
+  }
+  .certification-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bg-color);
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  /* Projektek szekció */
+  #projects {
+    background-color: var(--bg-color);
+  }
+  /* Kapcsolati szekció */
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-bg);
+  }
+  #contact .contact-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+  }
+  #contact .contact-links a:hover {
+    color: var(--accent-color);
+  }
+  #projectCarousel img {
+max-height: 300px;
+width: 100%;
+object-fit: cover;
+}
+
+@media (max-width: 768px) {
+#projectCarousel img {
+  max-height: 200px;
+}
+}
+
+.carousel-caption {
+background: rgba(0, 0, 0, 0.6);
+padding: 10px;
+border-radius: 8px;
+}
+.progress{
+    margin-bottom: 5px;
+}
